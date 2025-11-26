@@ -1,58 +1,44 @@
 /* Tema azul — identidade CBA */
-:root{
-  --brand:#0047B3;
-  --accent:#00A3FF;
-  --dark:#0B1F4B;
-  --bg:#F5F7FB;
-  --text:#1B2430;
-  --muted:#53627A;
-  --card:#ffffff;
-  --border:rgba(10,35,90,.12);
-}
+:root{ --brand:#0047B3; --accent:#00A3FF; --dark:#0B1F4B; --bg:#F5F7FB; --text:#1B2430; --muted:#53627A; --card:#ffffff; --border:rgba(10,35,90,.12); }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
-
 .hero{position:relative;background:linear-gradient(180deg, #0B1F4B 0%, #0B1F4B 72%, rgba(11,31,75,0.85) 100%);color:#fff}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 0}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{height:40px;width:auto}
+.logo-cba{height:88px;/* ou outro valor*/width:auto;}
 .subtitle{margin:2px 0 0;color:#d1def7}
-.hero-media{width:100%;height:260px;background-size:cover;background-position:center;filter:saturate(1.05) contrast(1.05)}
+.hero-media{width:100%;height:240px;background-size:cover;background-position:center;filter:saturate(1.05) contrast(1.05)}
 .nav{display:flex;flex-wrap:wrap;gap:10px}
 .nav a{color:#e6f0ff;text-decoration:none;padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.15)}
 .nav a:hover{background:rgba(255,255,255,.12)}
-
-.section{padding:60px 0}
+.section{padding:56px 0}
 .section.alt{background:#fff}
 .section h2{margin:0 0 14px;font-size:1.6rem;color:var(--dark)}
-.section h3{margin:18px 0 8px;font-size:1.1rem;color:var(--brand)}
-.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 18px;padding-left:18px}
-
-.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.member{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;box-shadow:0 6px 16px rgba(10,35,90,.05)}
-.member .avatar{width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:#eef3ff;margin-bottom:10px}
-.member .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.member .placeholder{width:100%;height:100%;display:block}
-.member h3{margin:0 0 6px;font-size:1.05rem;color:var(--brand)}
-.member p{margin:0;color:var(--muted)}
-
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
-.icons{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.icons img{height:40px}
-
-.rpa{display:flex;align-items:center;gap:12px;margin-top:12px}
-.robot{height:72px}
 .note{color:var(--muted)}
 
+/* Equipe — tamanho reduzido (50%) */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.member{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px;text-align:center;box-shadow:0 4px 12px rgba(10,35,90,.05)}
+.member .avatar{width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:#eef3ff;margin-bottom:8px}
+.member .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.member h3{margin:0 0 4px;font-size:.95rem;color:var(--brand)}
+.member p{margin:0;color:var(--muted);font-size:.85rem}
+
+/* GIF wide */
+.wide-gif{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff}
+.wide-gif img{width:100%;display:block}
+
+/* Encargos imagem única */
+.encargos-image{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff}
+.encargos-image img{width:100%;display:block}
+
+/* Vídeo */
 .video-wrap{position:relative;background:#000;border-radius:12px;overflow:hidden}
 .video-wrap video{width:100%;max-height:520px;display:block}
 .embed{margin-top:14px}
 .embed iframe{width:100%;height:420px;border:0;border-radius:12px}
 
-.footer{padding:28px 0;border-top:1px solid var(--border);background:#fff;color:var(--muted);text-align:center}
+.footer{padding:24px 0;border-top:1px solid var(--border);background:#fff;color:var(--muted);text-align:center}
 
-@media (max-width:720px){
-  .hero-media{height:200px}
-}
+@media (max-width:720px){ .hero-media{height:180px} }
